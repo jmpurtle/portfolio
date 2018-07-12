@@ -16,7 +16,46 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-		{==$_content=}
+		<header class="fixed-header">
+			<nav class="mobile-only">
+				<a href="/" class="site-logo">
+					<img src="/assets/media/images/JP-Logo-Final-Blue.svg" />
+				</a>
+				<div class="nav-btn">
+					<label for="nav-check">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</div>
+				<input type="checkbox" id="nav-check">
+				<div class="nav-links">
+					<a href="/portfolio">Portfolio</a>
+					<a href="/assets/pdf/jpurtleresume2018.pdf" target="_blank">Resume</a>
+					<a href="/about">About</a>
+				</div>
+			</nav>
+			<nav class="mobile-up">
+				<div class="left">
+					<a href="/portfolio">Portfolio</a>
+				</div>
+				<div class="center">
+					<a href="/" class="site-logo">
+					  <img src="/assets/media/images/JP-Logo-Final-Blue.svg">
+					</a>
+				</div>
+				<div class="right">
+					<a href="/assets/pdf/jpurtleresume2018.pdf" target="_blank">Resume</a>
+					<a href="/about">About</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			{==$_content=}
+		</main>
+		<footer>
+			Footer content
+		</footer>
 		<script src="assets/js/main-min.js"></script>
 	</body>
 </html>
