@@ -5,9 +5,7 @@ namespace Http\Controllers {
 
 		private $context;
 		public $about     = '\\Http\\Controllers\\AboutController';
-		public $blog      = '\\Http\\Controllers\\BlogController';
 		public $portfolio = '\\Http\\Controllers\\PortfolioController';
-		public $contact   = '\\Http\\Controllers\\ContactController';
 
 		public function __construct($context = null) {
 			$this->context = $context;
