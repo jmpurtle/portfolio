@@ -95,6 +95,7 @@ table {
 html {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  font-size: calc(1em + 1vw);
 }
 
 body {
@@ -218,6 +219,58 @@ nav.mobile-up .left {
 nav.mobile-up .right {
   text-align: right;
   width: 195px;
+}
+nav.mobile-up .right a {
+  float: left;
+  display: inline-block;
+}
+
+/* About page */
+.text-column {
+  max-width: 35em;
+  margin: 0 auto;
+}
+#about {
+  width: 100%;
+  padding-top: 30px;
+}
+#about blockquote {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 0.5em auto;
+}
+#about blockquote span {
+  display: block;
+  padding: 0.5em 0 1em 0;
+  text-align: right;
+  font-size: 0.75em;
+}
+#about p {
+  font-size: 1em;
+  line-height: 1.2;
+  padding-bottom: 1em;
+}
+#about h1 {
+  font-size: 2em;
+  margin-top: 1em;
+}
+#about h2 {
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+#about h2:before, #about h2:after {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: calc(30vw - 2em);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.25);
+  content: "";
+}
+#about h2:after {
+  right: 0;
 }
 
 /* Responsive */
