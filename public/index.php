@@ -38,17 +38,18 @@ $queryFields  = isset($_GET) ? $_GET : array();
 $postFields   = isset($_POST) ? $_POST : array();
 
 $context = array(
-	'debug'     => $config['debug'],
-	'config'    => $config,
-	'assetRoot' => $documentRoot . '/assets',
-	'request'   => array(
+	'debug'       => $config['debug'],
+	'config'      => $config,
+	'assetRoot'   => $documentRoot . '/assets',
+	'request'     => array(
 		'path'    => $path,
 		'uri'     => $requestPath,
 		'method'  => strtolower($_SERVER['REQUEST_METHOD']),
 		'query'   => $queryFields,
 		'post'    => $postFields,
 		'headers' => getallheaders()
-	)
+	),
+	'stats'       => array()
 );
 
 $logger = new \Loggers\ScreenLogger();
@@ -163,6 +164,10 @@ if ($isEndpoint) {
 
 }
 
+$serverGenEndTime = microtime(true);
+//0.0015 to account for approximate rendering variance
+$serverGenTime = (($serverGenEndTime - $generationStartTime + 0.0015)/1000) . ' ms';
+$response['context']['stats']['prerender_time'] = $serverGenTime;
 //Rendering
 require_once $vendorRoot . '/Templating/phptenjin-0.0.2/lib/Tenjin.php';
 
