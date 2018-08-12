@@ -32,7 +32,8 @@ require_once($serverRoot . '/app/autoload.php');
 $config       = require_once($serverRoot . '/app/appEnv.php');
 
 $requestPath  = $_SERVER['REQUEST_URI'];
-$path         = explode('/', str_replace($documentRoot, '', $requestPath));
+$path         = explode('?', $requestPath)[0]; //strip QSA from processing path
+$path         = explode('/', str_replace($documentRoot, '', $path));
 $path         = array_values(array_filter($path));
 $queryFields  = isset($_GET) ? $_GET : array();
 $postFields   = isset($_POST) ? $_POST : array();
