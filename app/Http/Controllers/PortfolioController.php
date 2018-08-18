@@ -8,6 +8,10 @@ namespace Http\Controllers {
 					'mli' => array(
 						'view'  => 'portfolio/mli',
 						'title' => 'Michelin Learning Institute'
+					),
+					'smart-coasters' => array(
+						'view'  => 'portfolio/smart-coaster',
+						'title' => 'Smart Coasters'
 					)
 				);
 

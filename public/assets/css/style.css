@@ -319,6 +319,17 @@ nav.mobile-up a {
 }
 
 /* Portfolio - Full */
+.portfolio-piece-type {
+  max-width: 10em;
+  display: block;
+  padding: 10px;
+}
+.portfolio-piece-type.concept {
+  background-color: #587383;
+}
+.portfolio-piece-type.website {
+  background-color: #8bc34a;
+}
 #portfolio-intro, .portfolio-piece .header {
   text-align: center;
   padding: 30px 15px;
@@ -351,6 +362,22 @@ nav.mobile-up a {
   margin-bottom: 1em;
   margin-top: 1em;
   font-weight: bold;
+}
+.portfolio .portfolio-image * {
+  width: 100%;
+  font-size: 0.7em;
+}
+.portfolio .portfolio-image figure {
+  padding-bottom: 1em;
+}
+.portfolio .portfolio-image figcaption {
+  padding-bottom: 2em;
+}
+.portfolio-piece .cta {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2em;
+  line-height: 1.5;
 }
 
 #portfolio-basics {
