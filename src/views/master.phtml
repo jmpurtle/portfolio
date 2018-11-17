@@ -6,7 +6,7 @@
   		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<title>{==$title=}</title>
 		<meta name="description" content="John Purtle creates blazing fast, reliable and responsive websites or applications for those who wants their business to stand out.">
-		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=2">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3">
@@ -16,48 +16,26 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
-		<div id="pageStats" style="display: none;">
-			<span id="serverGenerationTime">{== $context['stats']['prerender_time'] =}</span>
-		</div>
-		<header class="fixed-header">
-			<nav class="mobile-only">
+		<header>
+			<grid-cell class="brown">
 				<a href="/" class="site-logo">
-					<img src="/assets/media/images/JP-Logo-Final-Blue.svg" />
+					<img src="/assets/media/images/JP-Logo-Final-Blue.png" />
 				</a>
-				<div class="nav-btn">
-					<label for="nav-check">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
-				</div>
-				<input type="checkbox" id="nav-check">
-				<div class="nav-links">
+				<nav>
 					<a href="/portfolio">Portfolio</a>
 					<a href="/assets/pdf/jpurtleresume2018.pdf" target="_blank">Resume</a>
 					<a href="/about">About</a>
-				</div>
-			</nav>
-			<nav class="mobile-up">
-				<div class="left">
-					<a href="/portfolio">Portfolio</a>
-				</div>
-				<div class="center">
-					<a href="/" class="site-logo">
-					  <img src="/assets/media/images/JP-Logo-Final-Blue.svg">
-					</a>
-				</div>
-				<div class="right">
-					<a href="/assets/pdf/jpurtleresume2018.pdf" target="_blank">Resume</a>
-					<a href="/about">About</a>
-				</div>
-			</nav>
+					<a href="#contact-form">Contact</a>
+				</nav>
+			</grid-cell>
 		</header>
 		<main>
 			{==$_content=}
 		</main>
 		<footer>
-			<span class="copyright">&copy; John Purtle <?php echo date('Y'); ?></span>
+			<grid-cell class="grid-cell lightblue">
+				<span class="copyright">&copy; John Purtle <?php echo date('Y'); ?></span>
+			</grid-cell>
 		</footer>
 		<script src="/assets/js/main.js"></script>
 	</body>
