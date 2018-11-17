@@ -16,7 +16,7 @@ namespace Http\Controllers {
 			return [
 				'HTTPStatusCode' => '200',
 				'view'           => 'home/index',
-				'title'          => 'John Purtle - Web Developer'
+				'title'          => 'John Purtle - Designer, Developer, Analyst'
 			];
 
 		}

@@ -47,6 +47,8 @@
 	};
 
 	var autotypeElement = document.getElementById('autotype');
-	autotyper = new Autotyper(autotypeElement);
+	if (autotypeElement) {
+		autotyper = new Autotyper(autotypeElement);
+	}
 
 })()

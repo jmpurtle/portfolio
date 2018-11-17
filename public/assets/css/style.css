@@ -289,6 +289,12 @@ form textarea {
 form button {
   font-size: 1.5em;
 }
+/* Block quotes */
+blockquote {
+  font-size: 1.5em;
+  font-style: italic;
+  margin: 1.5em auto;
+}
 
 /* Header */
 header {
@@ -331,6 +337,23 @@ header nav a + a {
 intro-hero grid-cell {
   border-top: 0px;
   padding: 65px 0;
+}
+
+/* About Me */
+about-me grid-cell {
+  padding: 65px 1em;
+}
+about-me content-wrapper {
+  text-align: left;
+}
+about-me h1, about-me h2 {
+  text-align: center;
+}
+about-me a {
+  color: #ffffff;
+}
+about-me a:hover {
+  color: #402312;
 }
 
 /* Autotyper */
