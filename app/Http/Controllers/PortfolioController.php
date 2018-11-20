@@ -9,9 +9,17 @@ namespace Http\Controllers {
 						'view'  => 'portfolio/mli',
 						'title' => 'Michelin Learning Institute'
 					),
-					'smart-coasters' => array(
-						'view'  => 'portfolio/smart-coaster',
-						'title' => 'Smart Coasters'
+					'lughlms' => array(
+						'view'  => 'portfolio/lughlms',
+						'title' => 'LughLMS'
+					),
+					'plac' => array(
+						'view'  => 'portfolio/plac',
+						'title' => 'Pearson Lakes Art Center'
+					),
+					'integer-2017-holiday' => array(
+						'view'  => 'portfolio/integer-2017-holiday',
+						'title' => 'Integer 2017 Holiday Card'
 					)
 				);
 
