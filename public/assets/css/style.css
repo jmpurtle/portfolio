@@ -137,6 +137,7 @@ img.center {
 }
 content-wrapper {
   display: block;
+  width: 95%;
   max-width: 980px;
   margin: 0 auto;
   text-align: center;
@@ -297,28 +298,11 @@ blockquote {
 }
 
 /* Header */
-header {
-  display: flex;
-  height: 150px;
-}
-header grid-cell {
-  border-bottom: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  height: 100%;
-  padding-right: 2.5em;
-}
 header nav a {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
+  padding: 1em 0;
 }
 header nav a:hover {
   color: #577483;
@@ -327,10 +311,15 @@ header nav a + a {
   margin-left: 15px;
 }
 .site-logo {
-  vertical-align: middle;
-  display: inline-block;
+  display: block;
   max-width: 75px;
-  margin-left: 2.5em;
+  margin: 1em auto 0 auto;
+}
+header nav {
+  text-align: center;
+}
+header grid-cell {
+  border-bottom: 0px;
 }
 
 /* Intro-hero */
@@ -461,6 +450,27 @@ footer grid-cell {
   padding: 65px 1em;
 }
 
+/* Portfolio */
+project-flow p, project-wireframes p {
+  color: #3a3a3a;
+}
+project-flow small, project-wireframes small {
+  color: #949494;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 65px;
+  font-size: 0.8em;
+  text-align: left;
+}
+project-overview grid-cell {
+  border-top: 0px;
+  padding: 65px 0;
+}
+project-flow img, project-wireframes img {
+  width: 100%;
+  height: auto;
+}
+
 /* Responsive */
 @media only screen and (min-width: 960px) {
   get-in-touch .one-half {
@@ -511,6 +521,29 @@ footer grid-cell {
   portfolio-bg img {
     position: static;
     transform: none;
+  }
+
+  header {
+    display: flex;
+    height: 150px;
+  }
+  header grid-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+    padding-right: 2.5em;
+  }
+  .site-logo {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 2.5em;
   }
 }
 @media only screen and (min-width: 480px) {
