@@ -433,6 +433,35 @@ portfolio-summary:hover article {
   opacity: 1;
 }
 
+/* Article */
+blog-post article {
+  width: 100%;
+}
+blog-post grid-cell {
+  padding: 65px 1em;
+}
+blog-post content-wrapper {
+  text-align: left;
+}
+blog-post header {
+  display: block;
+  height: auto;
+  padding-bottom: 1em;
+}
+blog-post h1 {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+blog-post .byline {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+small {
+  font-size: 0.6em;
+}
+
 /* Get In Touch */
 get-in-touch .one-half {
   width: 100%;
@@ -444,6 +473,9 @@ get-in-touch content-wrapper {
 get-in-touch grid-cell:first-of-type content-wrapper {
   text-align: left;
   font-size: 0.7em;
+}
+thanks-message content-wrapper {
+  padding: 35px 1em 15px 1em;
 }
 
 footer grid-cell {

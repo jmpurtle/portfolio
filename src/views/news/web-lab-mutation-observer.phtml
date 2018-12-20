@@ -1,0 +1,55 @@
+<?php //@ARGS _content, context, title ?>
+<blog-post>
+	<article itemscope itemtype="http://schema.org/BlogPosting">
+		<grid-cell class="lightblue">
+			<content-wrapper>
+				<header>
+					<h1 itemprop="headline">Web Laboratory: Observing Mutations</h1>
+					<div class="byline">
+						<address class="author">By John Purtle</address> 
+		            	<time pubdate datetime="2018-12-17" title="December 17th, 2018">on 12/17/18</time>
+					</div>
+				</header>
+				<p>Mad science is not just giant robots, sharks with laser beams strapped to their heads and test tubes. It can be doing things far out of the ordinary just to see if it'll work. That's how I felt about a certain Web API I was told about by the name of MutationObserver.</p>
+				<p>What is MutationObserver? According to MDN, the MutationObserver interface provides the ability to watch for changes being made to the DOM tree. It is designed as a replacement for the older Mutation Events feature which was part of the DOM3 Events specification. It may not sound like a lot for ordinary web development but you'll be surprised when you think outside the box.</p>
+				<p>Walking up behind me on ordinary days while doing design and development work, you'll see Chrome's Inspector tools window up on my screen. I prefer to do my visual editing right in the browser using that inspector and copying over the changes to the source code because I can get instant feedback on changes. At times, this can be a pain because I'll forget one or two things that I changed when transferring over and I reload the page, scratching my head about what went wrong. With MutationObserver being well supported across the browsers, a light bulb went off in my head!</p>
+				<p>One of my common complaints about CMSes is that the feedback is never quite as instant as changing things with inspector tools. You're still going back and forth between pages to make updates and reviewing it. Every time you do so, it saps precious seconds. If MutationObserver listens and can execute things in JavaScript when things happen in the DOM, wouldn't this allow me to do real work from inspector tools?</p>
+				<p>Quick experimenting confirms my suspicions! MutationObserver is capable of detecting three kinds of events: Changes to attributes on elements, insertion/deletion/rearrangement of elements and changes to the text inside of an element. These three events would cover the majority of CMS activity and with a headless CMS, you could easily hook up MutationObserver to creating API calls after a short delay or sending the records of changes upon saving.</p>
+				<p>There is one minor downside to this, MutationObserver is not able to detect -indirect- changes to things on the screen. That means if I add a new CSS selector rule as opposed to editing inline styles through the inspector panel, it wouldn't be picked up. This is usually not a problem though as we have themes we're building on top of. Naturally, most of our style changes would be explicit overrides of the theme in places anyway.</p>
+				<p>If you want to learn more about MutationObserver, you can read the specifications from MDN <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">here.</a></p>
+				<small>Speaking of which, I'm actually working on a CMS making use of MutationObserver to improve the overall CMS experience for designers, developers and content editors alike. If you want to get a reduced rate on your project in exchange for testing it out while it's in open beta, contact me today!</small>
+			</content-wrapper>
+		</grid-cell>
+	</article>
+</blog-post>
+<get-in-touch>
+	<grid-cell class="lightblue one-half">
+    <content-wrapper>
+      <p>Hello! Thanks for your interest in working together.</p>
+
+      <p>The best sites are the ones with value for both the visitor and the business. I’d love to hear about your responsive web or shopper journey design project. If it’s about getting the right information to the right person at the right time, I’m your guy. I focus primarily on analytics informed website designs, builds and physical analytics products, built with care and precision.</p>
+
+      <p>I’m not always able to respond to every email that comes my way but if it sounds like a good fit, I’ll get back to you within two business days.</p>
+
+      <p>If you have a general question or invitation to attend/speak, feel free to send me an email at hello@johnpurtle.com.</p>
+
+      <p>Rather meet me in person? Email me and ask, whether it's my views on the industry, shooting the breeze or about a project!</p>
+    </content-wrapper>
+  </grid-cell>
+  <grid-cell class="brown one-half">
+    <content-wrapper>
+      <a href="#" id="contact-form"></a>
+      <h2>How can I help?</h2>
+      <form action="/contact/lead" method="post">
+        <label class="one-half">NAME <input type="text" name="name" /></label>
+        <label class="one-half">ORGANIZATION <input type="text" name="org" /></label>
+        <label>EMAIL ADDRESS <input type="text" name="email" required /></label>
+        <label>PROJECT DESCRIPTION <textarea name="project"></textarea></label>
+        <label class="one-half">BUDGET <input type="text" name="budget" /></label>
+        <label class="one-half">LAUNCH DATE <input type="text" name="launchdate" /></label>
+        <label>HOW DID YOU FIND ME? <input type="text" name="referral" /></label>
+        <button class="cta blue-on-white">Let's chat</button>
+      </form>
+    </content-wrapper>
+  </grid-cell>
+</get-in-touch>
