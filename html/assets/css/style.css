@@ -503,6 +503,32 @@ project-flow img, project-wireframes img {
   height: auto;
 }
 
+portfolio-piece {
+  color: #444444;
+}
+portfolio-piece section {
+  width: 100%;
+}
+portfolio-piece grid-cell {
+  padding: 65px 1em;
+}
+portfolio-piece hero-img {
+  width: 100%;
+  height: auto;
+  margin: 0 10px;
+}
+portfolio-piece header h1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #666666;
+}
+portfolio-piece header content-wrapper {
+  max-width: none;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
 /* Responsive */
 @media only screen and (min-width: 960px) {
   get-in-touch .one-half {
