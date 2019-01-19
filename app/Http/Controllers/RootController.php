@@ -33,6 +33,15 @@ namespace Http\Controllers {
 		
 		}
 
+		public function github($path = [], $context = null) {
+
+			return [
+				'HTTPStatusCode' => '200',
+				'view'           => 'github/index'
+			];
+		
+		}
+
 	}
 
 }
