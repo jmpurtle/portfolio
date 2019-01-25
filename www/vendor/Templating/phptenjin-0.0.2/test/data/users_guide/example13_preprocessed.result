@@ -1,2 +1,0 @@
-$ phptenjin -P example13.phtml
-<a href="/items/show/{==$params["id"]=}">Show {=$params["name"]=}</a>

@@ -6,6 +6,6 @@ return array(
 		'dbPort' => '3306',
 		'dbName' => 'leads',
 		'dbUser' => 'dbuser',
-		'dbPass' => 'haste6?panty'
+		'dbPass' => 'dbpass'
     )
 );

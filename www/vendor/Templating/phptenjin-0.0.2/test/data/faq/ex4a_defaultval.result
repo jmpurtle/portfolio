@@ -1,2 +1,0 @@
-$ phptenjin -c '$user="Tenjin";' ex4.phtml
-Hello Tenjin!
